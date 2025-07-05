@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  gateway:
+    build: ./gateway
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - e-service
+      - f-service
+      - nats
+
+  e-service:
+    build: ./e-service
+    depends_on:
+      - nats
+    env_file:
+      - .env
+
+  f-service:
+    build: ./f-service
+    depends_on:
+      - nats
+    env_file:
+      - .env
+
+  nats:
+    image: nats
+    ports:
+      - "4222:4222"
