@@ -27,8 +27,8 @@ services:
     env_file:
       - .env
 
-  rust-parser:
-    build: ./rust-parser
+  axum:
+    build: ./axum
     ports:
       - "8000:8000"
     restart: unless-stopped
