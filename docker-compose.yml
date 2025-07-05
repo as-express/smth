@@ -11,6 +11,7 @@ services:
       - e-service
       - f-service
       - nats
+      - rust-parser
 
   e-service:
     build: ./e-service
@@ -25,6 +26,12 @@ services:
       - nats
     env_file:
       - .env
+
+  rust-parser:
+    build: ./rust-parser
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
 
   nats:
     image: nats
