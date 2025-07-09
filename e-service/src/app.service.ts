@@ -12,8 +12,9 @@ export class AppService {
 
   async find(data: UserReqDto) {
     const parsed = await this.AiService.parseRequest(data.text);
-    const result = await this.client.send('filtering', parsed);
+    const result = await this.client.send('parsing', parsed);
 
-    return await this.AiService.dataOptimization(result);
+    return result;
+    // return await this.AiService.dataOptimization(result);
   }
 }
