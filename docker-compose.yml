@@ -1,17 +1,8 @@
-version: "3.9"
-
 services:
-  gateway:
-    build: ./gateway
+  nats:
+    image: nats
     ports:
-      - "3000:3000"
-    env_file:
-      - .env
-    depends_on:
-      - e-service
-      - f-service
-      - nats
-      - rust-parser
+      - "4222:4222"
 
   e-service:
     build: ./e-service
@@ -27,13 +18,21 @@ services:
     env_file:
       - .env
 
-  axum:
-    build: ./axum
-    ports:
-      - "8000:8000"
-    restart: unless-stopped
+  web-parser:
+    build: ./web-parser
+    depends_on:
+      - nats
+    env_file:
+      - .env
 
-  nats:
-    image: nats
+  gateway:
+    build: ./gateway
     ports:
-      - "4222:4222"
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - e-service
+      - f-service
+      - nats
+      - web-parser
