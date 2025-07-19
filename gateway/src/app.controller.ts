@@ -1,4 +1,4 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common';
 import { EService } from './services/e-service';
 import { FService } from './services/f-service';
 
@@ -8,4 +8,9 @@ export class AppController {
     private readonly EService: EService,
     private readonly FService: FService,
   ) {}
+
+  @Get()
+  async function(@Query('text') query: string) {
+    return this.EService.find(query);
+  }
 }

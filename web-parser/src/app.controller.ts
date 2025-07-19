@@ -7,7 +7,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @MessagePattern('parsing')
-  async parsing(query: string) {
+  async parsing(query: string): Promise<any> {
     return this.appService.parsing(query);
   }
 }

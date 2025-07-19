@@ -8,7 +8,7 @@ import { AiService } from './ai.service';
   imports: [
     ClientsModule.register([
       {
-        name: 'F_SERVICE',
+        name: 'PARSER_SERVICE',
         transport: Transport.NATS,
         options: {
           servers: [process.env.SERVER_URL || 'nats://nats:4222'],
