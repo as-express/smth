@@ -36,7 +36,7 @@ export class TechnodomService {
           Accept: 'application/json, text/plain, */*',
           Origin: originUrl,
           Referer: payload.referer,
-          'User-Agent': userAgent,
+          'User-Agent': userAgent
           affiliation: 'web',
         },
       });
