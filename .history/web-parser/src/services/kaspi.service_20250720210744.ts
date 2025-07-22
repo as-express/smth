@@ -1,0 +1,11 @@
+import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+
+@Injectable()
+export class KaspiService {
+  constructor(private readonly config: ConfigService) {}
+
+  async parse(query: string) {}
+
+  p = el;
+}

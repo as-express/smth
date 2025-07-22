@@ -5354,6 +5354,11 @@ undici-types@~7.8.0:
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.8.0.tgz#de00b85b710c54122e44fbfd911f8d70174cd294"
   integrity sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==
 
+undici@6.11.0:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-6.11.0.tgz#e99ec2c46914cdd658870bf732662b04097782fb"
+  integrity sha512-y4AOKcD36FXz+MY19yw8Emtbsdp8wBWTLln508+EJwqWezUheU5PSRbvIb+pQld7ZoOY8ruNwqSejSVGZUS/aA==
+
 undici@^7.10.0:
   version "7.11.0"
   resolved "https://registry.yarnpkg.com/undici/-/undici-7.11.0.tgz#8e13a54f62afa756666c0590c38b3866e286d0b3"

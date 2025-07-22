@@ -31,7 +31,8 @@
     "playwright": "^1.53.2",
     "puppeteer": "^24.12.1",
     "reflect-metadata": "^0.2.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "undici": "6.11.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
